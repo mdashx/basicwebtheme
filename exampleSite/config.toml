@@ -1,0 +1,12 @@
+title = "Example Site For Basic Web Theme"
+baseURL = "https://demo.basicwebtheme.com"
+languageCode = "en-us"
+theme = "hugo-theme-basic-web-theme"
+themesDir = "../.."
+
+[params]
+headerImage = "/assets/images/header.svg"
+
+[taxonomies]
+tag = "tags"
+author = "authors"

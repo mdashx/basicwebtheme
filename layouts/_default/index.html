@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{ if .Params.Listpage }}
+
+{{ with .Site.GetPage .Params.Listpage }}
+
+{{ range .Pages }}
+
+{{ partial "preview-post.html" (dict "page" . "full" "true") }}
+
+{{ end }}
+
+{{ end }}
+
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<h2>{{ .Title }}</h2>
+
+{{ .Content }}
+
+{{ range .Pages }}
+
+{{ partial "preview-post.html" . }}
+
+{{ end }}
+
+{{ end }}

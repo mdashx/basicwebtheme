@@ -1,0 +1,13 @@
+<em>{{ $.label }} 
+
+{{ range $term := .terms }}
+
+  {{ $term_path := lower (replace ($term) " " "-") }}
+  {{ $term_page := site.GetPage (path.Join $.parent $term_path) }}
+  {{ $url := $term_page.Permalink}}
+
+  <a href={{ $url }}>{{ $term }}</a>
+
+{{ end }}
+
+</em>

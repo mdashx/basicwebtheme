@@ -1,0 +1,29 @@
+{{ $use_header := .Get "use_header" }}
+{{ $classes := .Get "classes" }}
+
+<table class="{{ $classes }}">
+{{ $data := index $.Site.Data (.Get "table_data") }}
+
+  {{ range $index, $row := $data }}
+  {{ if and (eq $index 0) $use_header }}
+  
+  <thead>
+  <tr>
+    {{ range $cell := $row }}
+    <th>{{ $cell }}</th>
+    {{ end }}
+  </tr>
+  </thead>
+  
+  {{ else }}
+  
+  <tbody>
+    {{ range $cell := $row }}
+    <td>{{ $cell }}</td>
+    {{ end }}
+  </tbody>
+  
+  {{ end }}
+  {{ end }}
+</table>
+

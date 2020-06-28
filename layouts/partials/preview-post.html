@@ -1,0 +1,70 @@
+{{ if  isset  . "full" }}
+{{ if .full }}
+
+<!-- Show full post -->
+
+{{ if .page.PublishDate }}
+
+<!-- ...link with publish date -->
+
+<h2>{{ .page.Title }}</h2>
+
+<a href={{ .Permalink }}>
+  <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
+</a>
+
+{{ else }}
+
+<!-- link with NO publish date -->
+
+<a href={{ .Permalink }}>
+  <h2>{{ .page.Title }}</h2>
+</a>
+
+{{ end }}
+
+<!-- /end link -->
+
+<div class="list-content">
+  {{ .page.Content }}
+</div>
+
+{{ end }}
+
+<!-- /end full post -->
+
+{{ else }}
+
+<!-- Show truncated post -->
+
+{{ if .PublishDate }}
+
+<!-- ...link with publish date -->
+
+<em>{{ .Title }}</em><span> - </span>
+
+<a href={{ .Permalink }}>
+  <em>{{ .PublishDate.Format "January 2, 2006" }}</em>
+</a>
+
+
+
+<!-- ...link with NO publish date -->
+
+{{ else }}
+
+<a href={{ .Permalink }}>
+  <em>{{ .Title }}</em>
+</a>
+
+{{ end }}
+
+<!-- /end link -->
+
+{{ .Content | truncate 200 }}
+
+{{ end }}
+
+<!-- /end truncated post -->
+
+<hr />

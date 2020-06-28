@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<h2>{{ .Title }}</h2>
+
+<em>{{ .PublishDate.Format "January 2, 2006" }}</em>
+
+{{ .Content }}
+
+<p>
+{{ if .Param "authors" }}
+
+{{ partial "list-taxonomy-terms.html" (dict "parent" "authors" "terms" (.Param "authors") "label" "Written by:") }}
+
+{{ end }}
+</p>
+
+<p>
+{{ if .Param "tags" }}
+
+{{ partial "list-taxonomy-terms.html" (dict "parent" "tags" "terms" (.Param "tags") "label" "Tags:") }}
+
+{{ end }}
+</p>
+
+{{ end }}

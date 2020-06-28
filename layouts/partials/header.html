@@ -1,0 +1,12 @@
+<a href="/">
+  {{ if (.Params.HeaderText) }}
+  <h1>{{ .Params.HeaderText }}</h1>
+  {{ else if (.Params.HeaderImage) }}
+  <img src="{{ .Params.HeaderImage }}" />
+  {{ else if ($.Site.Params.HeaderImage) }}
+  <img src="{{ $.Site.Params.HeaderImage }}" />
+  {{ else }}
+  <h1>{{ $.Site.Params.HeaderText }}</h1>
+  {{ end }}
+</a>
+<hr />
