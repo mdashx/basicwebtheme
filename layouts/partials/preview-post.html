@@ -9,7 +9,7 @@
 
 <h2>{{ .page.Title }}</h2>
 
-<a href={{ .Permalink }}>
+<a href={{ .page.Permalink }}>
   <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
 </a>
 
@@ -17,7 +17,7 @@
 
 <!-- link with NO publish date -->
 
-<a href={{ .Permalink }}>
+<a href={{ .page.Permalink }}>
   <h2>{{ .page.Title }}</h2>
 </a>
 

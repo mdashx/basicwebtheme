@@ -6,7 +6,7 @@
 
 }
 
-This is an example site demonstrating the [Basic Web Theme](https://basicwebtheme.com).
+This is an example site demonstrating the [Basic Web Theme](https://www.basicwebtheme.com).
 
 - Learn more [about this site](/about/).
 - View [all posts](/posts/)

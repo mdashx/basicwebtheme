@@ -5,8 +5,10 @@
   <img src="{{ .Params.HeaderImage }}" />
   {{ else if ($.Site.Params.HeaderImage) }}
   <img src="{{ $.Site.Params.HeaderImage }}" />
-  {{ else }}
+  {{ else if ($.Site.Params.HeaderText) }}
   <h1>{{ $.Site.Params.HeaderText }}</h1>
+  {{ else }}
+  <span id="some kind of header should go here"></span>
   {{ end }}
 </a>
 <hr />
