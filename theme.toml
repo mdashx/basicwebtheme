@@ -3,11 +3,10 @@ license = "MIT"
 licenselink = "https://github.com/mdashx/basicwebtheme/blob/master/LICENSE"
 description = "A basic web theme."
 homepage = "https//www.basicwebtheme.com"
-tags = ["minimal", "responsive", "white", "simple", "blog"]
-features = []
+tags = ["minimal", "responsive", "white", "simple", "clean", "light", "blog", "readable"]
+features = ["readable columns"]
 min_version = "0.59.1"
 
-# If the theme has a single author
 [author]
     name = "Tom Bullock"
     homepage = "https://www.mdashx.com"

@@ -62,6 +62,9 @@ td {
     margin-bottom: 3px;
 }
 
+
+/* The styles below deal with the default Hugo theme content. */
+
 .list-content h1, .list-content h2 {
     font-size: 1.2em;
 }
