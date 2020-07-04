@@ -6,7 +6,7 @@
 
 {{ range .Pages }}
 
-{{ partial "preview-post.html" . }}
+{{ partial "post-preview.html" (dict "page" . ) }}
 
 {{ end }}
 

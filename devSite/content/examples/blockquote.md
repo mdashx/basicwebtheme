@@ -1,6 +1,5 @@
 {
-    "title": "Blockquotes",
-    "layout": "standalone"
+    "title": "Blockquotes"
 }
 
 H.L. Mencken helps us demonstrate a block quote — 

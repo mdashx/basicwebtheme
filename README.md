@@ -42,3 +42,8 @@ for:
 The example site gives shows how to use all of the templates in
 the Hugo theme, shows how to use taxonomy, menus, shortcodes, and data
 templates, and demonstrates the styling of various elements.
+
+
+Page Kinds: https://gohugo.io/templates/section-templates/#page-kinds
+
+

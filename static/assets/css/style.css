@@ -39,31 +39,39 @@ code {
 }
 
 table {
-  min-width: 90vw;
+    min-width: 90vw;
+    border-collapse: collapse;
+    border: 1px solid #bdbdbd;
 }
 
 th {
   text-align: left;
   white-space: nowrap;
   padding: 3px 6px;
+  background: #eaeaea;
+  border: 1px solid #bdbdbd;
 }
 
 td {
   white-space: nowrap;
-  padding: 3px 6px;
-}
-
-table.table-with-borders {
-  border-collapse: collapse;
-}
-
-table.table-with-borders td {
   border: 1px solid #bdbdbd;
   padding: 5px 10px;
 }
 
-table.table-with-borders th {
-  background: #eaeaea;
+.post-header h2 {
+    margin-bottom: 3px;
+}
+
+.list-content h1, .list-content h2 {
+    font-size: 1.2em;
+}
+
+.list-content h2 {
+    font-size: 1.1em;
+}
+
+.archive {
+    margin-bottom: 15px;
 }
 
 @media (min-width: 699px) {

@@ -1,12 +1,34 @@
 title = "Example Site For Basic Web Theme"
 baseURL = "https://demo.basicwebtheme.com"
 languageCode = "en-us"
-theme = "hugo-theme-basic-web-theme"
+theme = "basicwebtheme"
 themesDir = "../.."
 
 [params]
 headerImage = "/assets/images/header.svg"
 
-[taxonomies]
-tag = "tags"
-author = "authors"
+[menu]
+
+[[menu.main]]
+title = "Home"
+name = "The homepage"
+url = "/"
+weight = 1
+
+[[menu.main]]
+title = "Posts"
+name = "All posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+title = "Archive"
+name = "All posts with tags"
+url = "/archives"
+weight = 3
+
+[[menu.main]]
+title = "About"
+name = "About page"
+url = "/about"
+weight = 4

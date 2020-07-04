@@ -2,7 +2,7 @@
     "title": "About",
     "menu": "main",
     "weight": "3",
-    "layout": "standalone"
+    "skipTitle": true
 }
 
 

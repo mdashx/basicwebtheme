@@ -1,8 +1,8 @@
 {
     "title": "Newsletter",
-    "layout": "standalone",
+    "skipTitle": true,
     "menu": "main",
-    "weight": "5"
+    "weight": 5
 }
 
 This newsletter doesn't really exist, but it's an opportunity to show

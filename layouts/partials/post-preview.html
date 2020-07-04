@@ -1,0 +1,49 @@
+{{ $full := false }}
+{{ $bigTitle := true }}
+{{ $content := .page.Content }}
+
+{{ if isset . "full" }}{{ $full = .full }}{{ end }}
+{{ if isset . "bigTitle" }}{{ $bigTitle = .bigTitle }}{{ end }}
+
+{{ if not $full}}
+{{ $content = $content | truncate 200}}
+{{ end }}
+
+{{ if $bigTitle }}
+<div class="post-header">
+  <div class="post-title">
+    {{ if .page.PublishDate }}
+    <h2>{{ .page.Title }}</h2>
+    <a href={{ .page.Permalink }}>
+      <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
+    </a>
+    {{ else }}
+    <a href={{ .page.Permalink }}>
+      <h2>{{ .page.Title }}</h2>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ else }}
+<div class="post-header">
+  <div class="post-title">
+    {{ if .page.PublishDate }}
+    <em>{{ .page.Title }}</em><span> - </span>
+
+    <a href={{ .page.Permalink }}>
+      <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
+    </a>
+    {{ else }}
+    <a href={{ .page.Permalink }}>
+      <em>{{ .page.Title }}</em>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<div class="list-content">
+  {{ $content }}
+</div>
+
+<hr />

@@ -1,8 +1,13 @@
 {{ define "main" }}
 
-<h2>{{ .Title }}</h2>
+{{ with .Param "skipTitle"  }}
+{{ else }}
+<h2>{{ $.Title }}</h2>
+{{ end }}
 
+{{ if .PublishDate }}
 <em>{{ .PublishDate.Format "January 2, 2006" }}</em>
+{{ end }}
 
 {{ .Content }}
 

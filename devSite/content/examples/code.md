@@ -1,6 +1,6 @@
 {
     "title": "Code blocks",
-    "layout": "standalone"
+    "skipTitle": true
 }
 
 A code block:

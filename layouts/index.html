@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{ range $pages }}
+
+{{ partial "post-preview.html" (dict "page" . "bigTitle" true) }}
+
+{{ end }}
+
+{{ end }}

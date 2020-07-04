@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{ range $pages }}
+
+<div class="post-header archive">
+  <div class="post-title">
+    {{ if .PublishDate }}
+    <strong>{{ .Title }}</strong><span> - </span>
+
+    <a href={{ .Permalink }}>
+      <em>{{ .PublishDate.Format "January 2, 2006" }}</em>
+    </a>
+    {{ else }}
+    <a href={{ .Permalink }}>
+      <em>{{ .Title }}</em>
+    </a>
+    {{ end }}
+  </div>
+  <div class="post-tags">
+    {{ range .Params.Tags}}
+    <a href="/tags/{{ . }}">{{ . }}</a>
+    {{ end }}
+  </div>
+</div>
+<hr />
+
+{{ end }}
+
+{{ end }}
