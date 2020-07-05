@@ -4,6 +4,10 @@
 
 Pagination
 
+## Version 0.3.1
+
+Use https://example.com to comply with Hugo theme recommendations.
+
 ## Version 0.3.0
 
 Updated theme to meet guidelines here: https://github.com/gohugoio/hugoThemes/blob/master/README.md
