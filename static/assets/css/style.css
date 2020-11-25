@@ -102,6 +102,11 @@ td {
     display: inline;
   }
 
+  footer li em {
+      display: inline;
+  }
+
+  
   #updated {
     border-left: 1px solid #737373;
     padding-left: 5px;
