@@ -3,6 +3,10 @@ body {
   font-family: sans-serif;
 }
 
+h2 {
+    margin-top: 0px;
+}
+
 main {
   min-height: 100vh;
   padding: 1em;
