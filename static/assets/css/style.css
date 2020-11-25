@@ -20,9 +20,16 @@ footer ul {
 
 footer li {
   margin: 0;
+  display: inline;
+  padding: 2px 3px;
+}
+
+footer li em {
+  margin: 0;
   display: block;
   padding: 2px 3px;
 }
+
 
 blockquote {
   margin-left: 0.75em;
