@@ -1,25 +1,28 @@
 {{ $full := false }}
-{{ $bigTitle := true }}
+{{ $bigtitle := true }}
 {{ $content := .page.Content }}
+{{ $showdate := false }}
 
 {{ if isset . "full" }}{{ $full = .full }}{{ end }}
-{{ if isset . "bigtitle" }}{{ $bigTitle = .bigtitle }}{{ end }}
+{{ if isset . "bigtitle" }}{{ $bigtitle = .bigtitle }}{{ end }}
+{{ if isset . "showdate" }}{{ $showdate = .showdate }}{{ end }}
 
 {{ if not $full}}
 {{ $content = $content | truncate 200}}
 {{ end }}
 
-{{ if $bigTitle }}
+{{ if $bigtitle }}
 <div class="post-header">
   <div class="post-title">
-    {{ if .page.PublishDate }}
+    {{ if (and .page.PublishDate $showdate)}}
     <h2>{{ .page.Title }}</h2>
     <a href={{ .page.Permalink }}>
       <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
     </a>
     {{ else }}
+    <h2>{{ .page.Title }}</h2>
     <a href={{ .page.Permalink }}>
-      <h2>{{ .page.Title }}</h2>
+      <em><span style="font-size: smaller;">{{ .page.RelPermalink }}</span></em>
     </a>
     {{ end }}
   </div>
@@ -27,15 +30,17 @@
 {{ else }}
 <div class="post-header">
   <div class="post-title">
-    {{ if .page.PublishDate }}
+    {{ if eq (and .page.PublishDate $showdate) true}}
     <em>{{ .page.Title }}</em><span> - </span>
 
     <a href={{ .page.Permalink }}>
       <em>{{ .page.PublishDate.Format "January 2, 2006" }}</em>
     </a>
     {{ else }}
+    <em>{{ .page.Title }}</em><span> - </span>
+
     <a href={{ .page.Permalink }}>
-      <em>{{ .page.Title }}</em>
+      <em><span style="font-size: smaller;">{{ .page.RelPermalink }}</span></em>
     </a>
     {{ end }}
   </div>

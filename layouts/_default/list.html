@@ -2,9 +2,12 @@
 
 {{ .Content }}
 
+{{ $bigtitle := .Param "bigtitle" }}
+{{ $showdate := .Param "showdate" }}
+
 {{ range .Pages }}
 
-{{ partial "post-preview.html" (dict "page" . "full" true "bigtitle" (.Param "bigtitle") ) }}
+{{ partial "post-preview.html" (dict "page" . "full" true "bigtitle" $bigtitle "showdate" $showdate) }}
 
 {{ end }}
 
