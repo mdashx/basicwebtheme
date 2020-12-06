@@ -3,7 +3,7 @@
 {{ $content := .page.Content }}
 
 {{ if isset . "full" }}{{ $full = .full }}{{ end }}
-{{ if isset . "bigTitle" }}{{ $bigTitle = .bigTitle }}{{ end }}
+{{ if isset . "bigtitle" }}{{ $bigTitle = .bigtitle }}{{ end }}
 
 {{ if not $full}}
 {{ $content = $content | truncate 200}}
