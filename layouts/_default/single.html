@@ -1,11 +1,15 @@
 {{ define "main" }}
 
+{{ $showdate := true }}
+
+{{ if isset $.Site.Params "showdate" }}{{ $showdate = $.Site.Params.showdate }}{{ end }}
+
 {{ with .Param "skipTitle"  }}
 {{ else }}
 <h2>{{ $.Title }}</h2>
 {{ end }}
 
-{{ if .PublishDate }}
+{{ if (and .PublishDate $showdate )}}
 <em>{{ .PublishDate.Format "January 2, 2006" }}</em>
 {{ end }}
 
