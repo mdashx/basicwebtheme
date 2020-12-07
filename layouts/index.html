@@ -2,11 +2,14 @@
 
 {{ .Content }}
 
+{{ $bigtitle := .Param "bigtitle" }}
+{{ $showdate := .Param "showdate" }}
+
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
 {{ range $pages }}
 
-{{ partial "post-preview.html" (dict "page" . "bigTitle" true) }}
+{{ partial "post-preview.html" (dict "page" . "bigtitle" $bigtitle "showdate" $showdate) }}
 
 {{ end }}
 
