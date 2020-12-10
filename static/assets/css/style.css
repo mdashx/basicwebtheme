@@ -73,6 +73,16 @@ td {
     margin-bottom: 3px;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #282828;
+    color: #EEEEEE;
+  }
+  a {
+    color: #EEEEEE;
+  }
+}
+
 
 /* The styles below deal with the default Hugo theme content. */
 
