@@ -8,5 +8,5 @@ features = ["readable columns"]
 min_version = "0.59.1"
 
 [author]
-    name = "Tom Bullock"
+    name = "Tom Hyndman"
     homepage = "https://www.mdashx.com"
