@@ -17,6 +17,10 @@ img {
   max-width: 100%;
 }
 
+svg {
+  max-width: 100%;
+}
+
 footer ul {
   margin: 0;
   padding: 0;
