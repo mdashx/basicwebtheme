@@ -5,10 +5,24 @@
 {{ $bigtitle := .Param "bigtitle" }}
 {{ $showdate := .Param "showdate" }}
 {{ $full := .Param "previewfullcontent" }}
+{{ $randomorder := .Param "randomorder" }}
+
+
+{{ if $randomorder }}
+
+{{ range shuffle .Pages }}
+
+{{ partial "post-preview.html" (dict "page" . "full" $full "bigtitle" $bigtitle "showdate" $showdate) }}
+
+{{ end }}
+
+{{ else }}
 
 {{ range .Pages }}
 
 {{ partial "post-preview.html" (dict "page" . "full" $full "bigtitle" $bigtitle "showdate" $showdate) }}
+
+{{ end }}
 
 {{ end }}
 
