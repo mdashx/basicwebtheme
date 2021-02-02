@@ -2,7 +2,7 @@
 
 {{ range $term := .terms }}
 
-  {{ $term_path := ($term | lower | urlize) }}
+  {{ $term_path := (urlize $term) }}
   {{ $term_page := site.GetPage (path.Join $.parent $term_path) }}
   {{ $url := $term_page.Permalink}}
 
