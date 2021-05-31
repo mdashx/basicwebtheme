@@ -22,7 +22,7 @@
   </div>
   <div class="post-tags">
     {{ range .Params.Tags}}
-    <a href="/tags/{{ . }}">{{ . }}</a>
+    <a href="/tags/{{ . }}">{{ . | urlize}}</a>
     {{ end }}
   </div>
 </div>
