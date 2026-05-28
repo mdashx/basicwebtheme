@@ -1,0 +1,11 @@
+{% set static_url = static_url | default('/static') %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if page is defined and page.title %}{{ page.title }} | {% endif %}{{ site.title | default('') }}</title>
+  <meta name="description" content="{% if is_home | default(false) %}{{ site.description | default('') }}{% elif page is defined %}{{ page.description | default('') }}{% endif %}">
+  <link rel="icon" type="image/png" href="{{ static_url }}/favicon.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{ static_url }}/favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ static_url }}/favicon.png" sizes="96x96">
+  <link rel="stylesheet" href="{{ static_url }}/css/style.css" type="text/css">
+</head>

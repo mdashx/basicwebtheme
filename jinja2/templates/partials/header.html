@@ -1,0 +1,14 @@
+<a href="/">
+  {% if page is defined and page.header_text %}
+  <h1>{{ page.header_text }}</h1>
+  {% elif page is defined and page.header_image %}
+  <img src="{{ page.header_image }}" />
+  {% elif site.header_image %}
+  <img src="{{ site.header_image }}" />
+  {% elif site.header_text %}
+  <h1>{{ site.header_text }}</h1>
+  {% else %}
+  <span id="some kind of header should go here"></span>
+  {% endif %}
+</a>
+<hr />

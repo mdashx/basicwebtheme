@@ -1,0 +1,69 @@
+{# Format a datetime as "January 2, 2006" without platform-specific strftime flags. #}
+{% macro format_date(d) -%}
+{{ d.strftime('%B') }} {{ d.day }}, {{ d.year }}
+{%- endmacro %}
+
+{# Render a single post preview, used by list / index pages.
+   page: a page dict (see README for fields)
+   full: render full content instead of a summary
+   big_title: use an <h2> heading vs. an inline <em> title
+   show_date: show the publish date instead of the URL #}
+{% macro post_preview(page, full=false, big_title=true, show_date=false) %}
+{% if full %}
+  {% set body = page.content %}
+{% elif page.summary %}
+  {% set body = page.summary %}
+{% else %}
+  {% set body = page.content | striptags | truncate(200) %}
+{% endif %}
+{% if big_title %}
+<div class="post-header">
+  <div class="post-title">
+    {% if page.date and show_date %}
+    <h2>{{ page.title }}</h2>
+    <a href="{{ page.url }}">
+      <em>{{ format_date(page.date) }}</em>
+    </a>
+    {% else %}
+    <h2>{{ page.title }}</h2>
+    <a href="{{ page.url }}">
+      <em><span style="font-size: smaller;">{{ page.url }}</span></em>
+    </a>
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="post-header">
+  <div class="post-title">
+    {% if page.date and show_date %}
+    <em>{{ page.title }}</em><span> - </span>
+    <a href="{{ page.url }}">
+      <em>{{ format_date(page.date) }}</em>
+    </a>
+    {% else %}
+    <em>{{ page.title }}</em><span> - </span>
+    <a href="{{ page.url }}">
+      <em><span style="font-size: smaller;">{{ page.url }}</span></em>
+    </a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+<div class="list-content">
+  {{ body | safe }}
+</div>
+
+<hr />
+{% endmacro %}
+
+{# Render an inline list of taxonomy term links (tags, authors, ...).
+   label: text prefix, e.g. "Tags:" or "Written by:"
+   terms: a list of {name, url} dicts #}
+{% macro taxonomy_terms(label, terms) %}
+<em>{{ label }}
+{% for term in terms %}
+  <a href="{{ term.url }}">{{ term.name }}</a>
+{% endfor %}
+</em>
+{% endmacro %}

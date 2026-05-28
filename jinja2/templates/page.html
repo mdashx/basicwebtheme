@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "partials/macros.html" as m %}
+
+{% block main %}
+{% if not page.skip_title %}
+<h2>{{ page.title }}</h2>
+{% if page.subtitle %}<em>{{ page.subtitle }}</em><br/><br/>{% endif %}
+{% endif %}
+
+{% if page.date and show_date | default(true) %}
+<em>{{ m.format_date(page.date) }}</em>
+{% endif %}
+
+{{ page.content | safe }}
+
+{% if page.authors %}
+<p>{{ m.taxonomy_terms('Written by:', page.authors) }}</p>
+{% endif %}
+
+{% if page.tags %}
+<p>{{ m.taxonomy_terms('Tags:', page.tags) }}</p>
+{% endif %}
+{% endblock %}

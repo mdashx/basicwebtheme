@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "partials/macros.html" as m %}
+
+{% block main %}
+{% if page is defined and page.content %}{{ page.content | safe }}{% endif %}
+
+{% for p in pages | default([]) %}
+{{ m.post_preview(
+     p,
+     full=preview_full_content | default(false),
+     big_title=big_title | default(true),
+     show_date=show_date | default(false)
+   ) }}
+{% endfor %}
+{% endblock %}

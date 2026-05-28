@@ -1,0 +1,17 @@
+{% import "partials/macros.html" as m %}
+<footer>
+  <hr />
+  <ul>
+    {% for item in site.menu | default([]) %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+
+    {% if now is defined %}
+    <li>
+      <em id="updated">Updated: {{ m.format_date(now) }}</em>
+    </li>
+    {% endif %}
+  </ul>
+</footer>
