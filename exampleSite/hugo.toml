@@ -7,11 +7,7 @@ languageCode = "en-us"
 
 [params]
 headerImage = "/assets/images/header.svg"
-HighlightTheme = "nord"
 mainSections = ["post"]
-
-[markup.highlight]
-  noClasses = false
 
 [[menu.main]]
 title = "Home"

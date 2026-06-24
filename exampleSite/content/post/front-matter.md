@@ -43,7 +43,6 @@ Set these in `hugo.toml` under `[params]`.
 | `description` | string | Site meta description used on the homepage. |
 | `showdate` | bool | Global default for date display. Overridable per page. |
 | `mainSections` | list | Content types shown on the homepage. |
-| `HighlightTheme` | string | Syntax highlight theme. Options: `nord`, `dracula`, `one-dark`, `github-dark`, `gruvbox-dark`. |
 
 ### A complete post example
 

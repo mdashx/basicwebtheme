@@ -29,29 +29,17 @@ static/
 
 Your site's `static/` directory takes precedence over the theme's. **Copy the theme's CSS first, then add your overrides at the bottom** — otherwise you lose the base styles entirely.
 
-### Syntax highlighting
+### Code blocks
 
-The theme supports class-based syntax highlighting via Hugo's built-in Chroma highlighter. Enable it in `hugo.toml`:
+Code blocks render in a plain monospace style — no syntax coloring. The theme sets a single muted color (`#3b3b3b`) on all `pre` and `code` elements. This is intentional: syntax coloring is a feature of editors, not reading.
 
-```toml
-[params]
-  HighlightTheme = "nord"
+If you want syntax highlighting, generate a Chroma stylesheet and load it manually:
 
-[markup.highlight]
-  noClasses = false
+```bash
+hugo gen chromastyles --style=nord > static/assets/css/highlight.css
 ```
 
-Available themes (CSS files ship with the theme):
-
-| Name | Style |
-|------|-------|
-| `nord` | Cool arctic blues and greys |
-| `dracula` | Dark purple and pink |
-| `one-dark` | Atom's classic warm dark |
-| `github-dark` | Clean GitHub-style dark |
-| `gruvbox-dark` | Warm earthy retro |
-
-To remove highlighting entirely, leave `HighlightTheme` unset. Code blocks will render in the muted monospace color defined in `style.css`.
+Then load it in a custom `layouts/partials/head.html` override.
 
 ### Favicon
 
