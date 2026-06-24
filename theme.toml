@@ -5,7 +5,7 @@ description = "A basic web theme."
 homepage = "https://www.basicwebtheme.com"
 tags = ["minimal", "responsive", "white", "simple", "clean", "light", "blog", "readable"]
 features = ["readable columns"]
-min_version = "0.59.1"
+min_version = "0.112.0"
 
 [author]
     name = "Tom Hyndman"

@@ -1,6 +1,6 @@
 +++
-aliases = ["posts", "articles", "blog", "showcase", "docs"]
-title = "Posts"
-author = "Hugo Authors"
-tags = ["index"]
+title = "Documentation"
+aliases = ["posts", "docs"]
+showdate = false
+bigtitle = true
 +++

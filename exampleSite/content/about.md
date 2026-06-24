@@ -1,25 +1,33 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+date = 2026-01-01T00:00:00Z
+aliases = ["about-us"]
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Basic Web Theme is a minimal Hugo theme built on a simple premise: a website for reading should get out of the way and let you read.
 
-Hugo makes use of a variety of open source projects including:
+### What it is
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+A single-column layout with no JavaScript, no web fonts, no trackers, and no build pipeline to maintain. Dark mode is automatic. The CSS is 131 lines. Every page has the same structure: a header that links home, your content, and a footer with navigation.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+### What it is not
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+A framework. A design system. A component library. It won't give you a hero section, a mega-menu, or a card grid. If you need those things, there are better starting points.
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+### Who it's for
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Writers and developers who want to publish content on the web without the overhead of a modern frontend stack. If you're comfortable with Markdown and a text editor, you can run this theme.
+
+### The name
+
+"Basic Web" is intentional. Not basic as in limited — basic as in foundational. HTML, a stylesheet, a server. The essentials.
+
+### Source
+
+The theme is open source and available on [GitHub](https://github.com/mdashx/basicwebtheme) under the MIT license.
+
+### Built with
+
+- [Hugo](https://gohugo.io) — static site generator
+- [Chroma](https://github.com/alecthomas/chroma) — syntax highlighting
+- [Go modules](https://go.dev/ref/mod) — dependency management

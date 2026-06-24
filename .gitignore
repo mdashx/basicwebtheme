@@ -3,6 +3,7 @@ commit.txt
 *tmp*
 
 public/
+.hugo_build.lock
 
 # Binaries for programs and plugins
 *.exe
